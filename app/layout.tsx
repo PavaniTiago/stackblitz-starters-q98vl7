@@ -4,7 +4,7 @@ import { Space_Grotesk } from 'next/font/google';
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'M3 - Mesa Mini-Índice Minidólar',
+  title: 'M3 - Mesa Proprietária',
   description: 'Diga adeus ao loss no Day Trade',
 };
 

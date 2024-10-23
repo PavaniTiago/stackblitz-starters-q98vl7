@@ -10,20 +10,20 @@ interface StepProps {
 
 const Step = ({ number, title, description, features, className = '' }: StepProps) => (
   <div className={`relative group ${className}`}>
-    <div className="absolute -inset-1 bg-gradient-to-r from-neon/20 to-neon/0 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
-    <div className="relative p-8 bg-dark-100/50 rounded-2xl backdrop-blur-sm border border-white/5">
+    <div className="absolute -inset-1 bg-gradient-to-r from-neon/10 to-neon/0 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+    <div className="relative p-8 bg-dark-100/30 rounded-2xl backdrop-blur-sm border border-white/5 hover:border-neon/5 transition-colors">
       <div className="flex items-center gap-4 mb-6">
-        <div className="w-12 h-12 rounded-xl bg-neon/10 flex items-center justify-center">
-          <span className="text-2xl font-tusker text-neon">{number}</span>
+        <div className="w-12 h-12 rounded-xl bg-neon/5 flex items-center justify-center">
+          <span className="text-2xl font-tusker text-neon/90">{number}</span>
         </div>
-        <div className="h-px flex-1 bg-gradient-to-r from-neon/50 to-transparent"></div>
+        <div className="h-px flex-1 bg-gradient-to-r from-neon/30 to-transparent"></div>
       </div>
-      <h3 className="text-2xl font-medium text-white mb-4">{title}</h3>
-      <p className="text-gray-300 mb-6">{description}</p>
+      <h3 className="text-2xl font-medium text-white/90 mb-4">{title}</h3>
+      <p className="text-gray-300/90 mb-6">{description}</p>
       <ul className="space-y-3">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center gap-3 text-sm text-gray-400">
-            <div className="w-6 h-6 rounded-lg bg-neon/10 flex items-center justify-center text-neon">✓</div>
+          <li key={index} className="flex items-center gap-3 text-sm text-gray-400/90">
+            <div className="w-6 h-6 rounded-lg bg-neon/5 flex items-center justify-center text-neon/80">✓</div>
             {feature}
           </li>
         ))}
@@ -34,14 +34,14 @@ const Step = ({ number, title, description, features, className = '' }: StepProp
 
 export default function HowItWorks() {
   return (
-    <section className="relative z-10 py-32 overflow-hidden">
+    <section id='como-funciona' className="relative z-10 py-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/50 to-dark"></div>
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/40 to-dark"></div>
+        <div className="absolute inset-0 opacity-5">
           <div className="relative w-full h-full">
-            <div className="absolute inset-0 grid grid-cols-6 gap-px opacity-20">
+            <div className="absolute inset-0 grid grid-cols-6 gap-px opacity-10">
               {[...Array(36)].map((_, i) => (
-                <div key={i} className="bg-neon/20 backdrop-blur-sm"></div>
+                <div key={i} className="bg-neon/10 backdrop-blur-sm"></div>
               ))}
             </div>
           </div>
@@ -52,11 +52,11 @@ export default function HowItWorks() {
         <div className="text-center mb-20">
           <h2 className="text-5xl font-tusker leading-tight mb-6">
             COMO FUNCIONA O{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon to-neon/70">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon/90 to-neon/60">
               PROCESSO
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300/90 max-w-3xl mx-auto">
             Um caminho claro e estruturado para seu sucesso no mercado financeiro
           </p>
         </div>
@@ -99,9 +99,12 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-20 text-center">
-          <button className="px-8 py-4 bg-neon text-dark font-bold rounded-xl hover:bg-neon/90 transition-colors text-lg inline-flex items-center gap-2 group">
-            COMECE AGORA
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          <button className="relative px-8 py-4 bg-neon/90 text-dark font-bold rounded-xl hover:bg-neon/80 transition-colors text-lg inline-flex items-center gap-2 group">
+            <span className="absolute inset-0 bg-neon/60 blur-md opacity-30 rounded-xl"></span>
+            <span className="relative">
+              COMECE AGORA
+              <span className="group-hover:translate-x-1 transition-transform ml-2">→</span>
+            </span>
           </button>
         </div>
       </div>

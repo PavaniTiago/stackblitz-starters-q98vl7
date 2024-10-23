@@ -7,7 +7,7 @@ export default function VideoSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-dark/50 via-dark to-dark/50"></div>
         <Image
-          src="/geometric-bg.png"
+          src="/geometric-bg.svg"
           alt="Background Pattern"
           fill
           className="object-cover opacity-10"
@@ -20,16 +20,10 @@ export default function VideoSection() {
             <div className="absolute inset-0 flex items-center justify-center">
               <button className="w-20 h-20 rounded-full bg-neon/20 flex items-center justify-center group transition-all hover:scale-110">
                 <div className="w-16 h-16 rounded-full bg-neon flex items-center justify-center">
-                  <span className="text-dark text-4xl">▶</span>
+                  <span className="text-dark self-center text-4xl">▶</span>
                 </div>
               </button>
             </div>
-            <Image
-              src="/video-thumbnail.jpg"
-              alt="Video Thumbnail"
-              fill
-              className="object-cover"
-            />
           </div>
           <div className="p-6 text-center border-t border-white/5">
             <p className="text-gray-400 text-sm">

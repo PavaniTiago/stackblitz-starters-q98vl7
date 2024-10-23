@@ -67,7 +67,7 @@ export default function SuccessStories() {
                 </div>
 
                 <blockquote className="text-gray-300 mb-6">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
 
                 <div className="flex items-center gap-6 pt-6 border-t border-white/5">
